@@ -8,6 +8,7 @@ __all__ = (
     "DateField",
     "DateTimeField",
     "DateTimeLocalField",
+    "MonthField",
     "DecimalField",
     "DecimalRangeField",
     "EmailField",
@@ -66,6 +67,14 @@ class DateField(core.DateField):
     """
 
     widget = widgets.DateInput()
+    
+
+class MonthField(core.DateField):
+    """
+    Represents an ``<input type="month">``.
+    """
+
+    widget = widgets.MonthInput()
 
 
 class TimeField(core.TimeField):
